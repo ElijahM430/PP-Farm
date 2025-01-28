@@ -4,19 +4,24 @@ class Upgrade {
         this.cost = cost;
         this.buttonId = buttonId;
         this.owned = false;
+        this.visible = false;
     }
     purchase(){
         score -= this.cost;
         this.owned = true;
-        this.cost = Math.ceil(this.cost * 1.15 ** this.amountOwned);
     }
     
     buttonState() {
-        if(!this.visible) {
-            document.getElementById(this.buttonId).style.display = "none";
+        if (this.owned) {
+            document.getElementById(this.buttonId).style.display = 'none';
+        }
+
+        if (!this.visible) {
+            document.getElementById(this.buttonId).style.display = 'none';
             if (score >= this.cost) {
                 this.visible = true;
-            document.getElementById(this.buttonId).style.display = 'initial';
+                document.getElementById(this.buttonId).style.display =
+                    'initial';
             }
         }
 
@@ -27,7 +32,7 @@ class Upgrade {
         }
 
         document.getElementById(this.buttonId).innerHTML = 'Buy '  +
-        this.songName + ' (cost: PP '+ Math.ceil(this.cost).toLocaleString()
-        '+)';
+        this.upgradeName + ' (cost: PP '+ Math.ceil(this.cost).toLocaleString() +
+        ' PP)';
     }
 }
