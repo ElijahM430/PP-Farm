@@ -1,44 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <script src="src/beatmap.js"></script>
     <script src="src/upgrade.js"></script>
     <script src="src/hidden.js"></script>
     <script src="src/main.js"></script>
     <title>PP Farm</title>
-</head>
-<body>
-    <h1>PP Farm</h1>
-    <h2>
-        FARM AS MUCH PP(Performance Points)
-        AS YOU WANT!
-    </h2>
-    <h3>PP: <span class="score" id="score">0</span></h3>
-    <button type="button" onclick="scorePlusPlus()">CLICK THE CIRCLES!</button>
-    <h4>Beatmaps:</h4>
-    <button type="button" id="buyHarumachiClover" onclick="Harumachi.purchase()"> 
-        Buy Harumachi Clover
-    </button>
-    <button type="button" id="buyInferno" onclick="inferno.purchase()"> 
-        Buy Inferno
-    </button>
-    <button type="button" id="buySongthatmightplaywhenyoufightsans" onclick="songthatmightplaywhenyoufightsans.purchase()"> 
-        Buy Song that might play when you fight sans
-    </button>
-    <button type="button" id="buyBackstabber" onclick="backstabber.purchase()"> 
-        Buy Backstabber
-    </button>
-    <h5>Mods:</h5>
-    <button type="button" id="buyHidden1" onclick="hidden1.purchase()"> 
-        Enable Hidden For Harumachi Clover
-    </button>
-    <button type="button" id="buyHidden2" onclick="hidden2.purchase()"> 
-        Enable Hidden For Inferno
-    </button>
-    <button type="button" id="buyHidden3" onclick="hidden3.purchase()"> 
-        Enable Hidden For Song That Might Play When You Fight Sans
-    </button>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>PP Farm</h1>
+      <h2>FARM AS MUCH PP(Performance Points) AS YOU WANT!</h2>
+    </header>
+
+    <div class="outer">
+      <div class="click">
+        <h3>PP: <span class="score" id="score">0</span></h3>
+        <button type="button" onclick="scorePlusPlus()">
+          CLICK THE CIRCLES!
+        </button>
+      </div>
+      <div class="listing">
+        <div class="beatmaps">
+          <div class="listing-title">
+            <h4>Beatmaps:</h4>
+          </div>
+          <button
+            class="button"
+            type="button"
+            id="buyHarumachiClover"
+            onclick="Harumachi.purchase()"
+          >
+            Buy Harumachi Clover
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyInferno"
+            onclick="inferno.purchase()"
+          >
+            Buy Inferno
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buySongthatmightplaywhenyoufightsans"
+            onclick="songthatmightplaywhenyoufightsans.purchase()"
+          >
+            Buy Song that might play when you fight sans
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyBackstabber"
+            onclick="backstabber.purchase()"
+          >
+            Buy Backstabber
+          </button>
+        </div>
+        <div class="mods">
+          <div class="listing-title">
+            <h5>Mods:</h5>
+          </div>
+          <button
+            class="button"
+            type="button"
+            id="buyHidden1"
+            onclick="hidden1.purchase()"
+          >
+            Enable Hidden For Harumachi Clover
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyHidden2"
+            onclick="hidden2.purchase()"
+          >
+            Enable Hidden For Inferno
+          </button>
+          <button
+            class="button"
+            type="button"
+            id="buyHidden3"
+            onclick="hidden3.purchase()"
+          >
+            Enable Hidden For Song That Might Play When You Fight Sans
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
