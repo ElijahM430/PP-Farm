@@ -1,58 +1,60 @@
 body {
-    margin: 0 15% 0 15%;
+  margin: 0 15% 0 15%;
+  background: palevioletred;
 }
 
 header {
-    text-align: center;
+  text-align: center;
 }
 
 header > h2 {
-    font-style: italic;
+  font-style: italic;
 }
 
 div.outer {
-    border: 4px solid black;
+  border: 4px solid black;
 }
 
 div.click {
-    border-bottom: 4px solid black;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  border-bottom: 4px solid black;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 div.listing {
-    display: flex;
+  display: flex;
 }
 
 div.listing-title {
-    text-align: center;
-    border-bottom: 4px solid black;
+  text-align: center;
+  border-bottom: 4px solid black;
 }
 
 div.beatmaps,
 div.mods {
-    display: flex;
-    flex-direction: column;
-    flex: 50%;
-    height: 50vh;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  height: 50vh;
+  overflow: auto;
 }
 
 div.beatmaps {
-    border-right: 4px solid black;
+  border-right: 4px solid black;
 }
 
 .button {
-    border-bottom: 1px solid black;
-    padding: 14px 28px;
-    font-size: 1.25em;
-    cursor: pointer;
-    text-align: left;
+  border-bottom: 1px solid black;
+  padding: 14px 28px;
+  font-size: 1.25em;
+  cursor: pointer;
+  text-align: left;
+  background-color: palevioletred;
 }
 
 .button:disabled:hover {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
